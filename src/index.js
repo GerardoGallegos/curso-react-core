@@ -1,6 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const App = <h1>Hola React</h1>
+const TarjetaFruta = () => (
+  <div>
+    <h3>Titulo</h3>
+    <hr/>
+    <p>Descripcion ....</p>
+  </div>
+)
 
-ReactDOM.render(App, document.getElementById('root'))
+const App = () => (
+  <div>
+    <TarjetaFruta />
+    <TarjetaFruta></TarjetaFruta>
+  </div>
+)
+
+ReactDOM.render(<App />, document.getElementById('root'))
