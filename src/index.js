@@ -3,32 +3,22 @@ import ReactDOM from 'react-dom'
 
 class TarjetaFruta extends React.Component {
 
-  constructor () {
-    super()
-    this.state = {
-      cantidad: 0
-    }
-
-    const METHODS = [
-      'agregar',
-      'quitar',
-      'limpiar'
-    ]
-
-    METHODS.forEach((method) => {
-      this[method] = this[method].bind(this)
-    })
+  // Saco el state del contructor ******
+  state = {
+    cantidad: 0
   }
 
-  agregar () {
+  // Usamos arrow functions como property initilizers
+  // en lugar de los metodos de clase
+  agregar = () => {
     this.setState({ cantidad: this.state.cantidad + 1 })
   }
 
-  quitar () {
+  quitar = () => {
     this.setState({ cantidad: this.state.cantidad - 1 })
   }
 
-  limpiar () {
+  limpiar = () => {
     this.setState({ cantidad: 0 })
   }
 
